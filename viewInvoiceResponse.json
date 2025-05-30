@@ -1,0 +1,4 @@
+{
+    "InvoiceLink": "http://abc.com/invoice.pdf",
+    "Result": {"success": true}
+}
