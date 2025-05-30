@@ -1,0 +1,180 @@
+{
+	"info": {
+		"_postman_id": "ec401c89-3386-4dd7-91c5-66d7c2118c13",
+		"name": "mockapı",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32844424"
+	},
+	"item": [
+		{
+			"name": "token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/token",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"token"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}/token",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"token"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "72a27db7-89e9-4771-8375-f516ec5e1f4a"
+				}
+			]
+		},
+		{
+			"name": "/viewInvoice?barcode=123456",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}//viewInvoice?barcode=123456",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"",
+						"viewInvoice"
+					],
+					"query": [
+						{
+							"key": "barcode",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}//viewInvoice?barcode=123456",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"",
+								"viewInvoice"
+							],
+							"query": [
+								{
+									"key": "barcode",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n  \"InvoiceLink\": \"http://abc.com/invoice.pdf\",\n  \"Result\": {\n    \"success\": true\n  }\n}"
+				}
+			]
+		},
+		{
+			"name": "/sendInvoice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/sendInvoice",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"sendInvoice"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Default",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}//sendInvoice",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"",
+								"sendInvoice"
+							]
+						}
+					},
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n  \"Message\": \"Invoice sent successfully\",\n  \"Result\": {\n    \"success\": true\n  }\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://f9b9ffcb-f72d-4696-9adf-6c1319041437.mock.pstmn.io"
+		}
+	]
+}
